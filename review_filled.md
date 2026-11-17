@@ -1,4 +1,4 @@
-# COMPLETED REVIEW (draft answers on template)
+# COMPLETED REVIEW
 
 ## Standard Review Form of MDPI Journals
 Paper reviewed: "How Do AI Coding Agents Contribute to Software Development? An Empirical Study of Agentic Pull Requests", Mazloomzadeh, Morovati, Khomh (arXiv:2607.21832, 43 pages, preprint July 2026).
@@ -6,7 +6,7 @@ Paper reviewed: "How Do AI Coding Agents Contribute to Software Development? An 
 ### Rating legend
 High / Average / Low / No Answer
 
-### Part A — criteria (filled)
+### Part A: criteria (filled)
 - Originality / Novelty: **Average**
 - Significance of Content: **High**
 - Quality of Presentation: **Average**
@@ -57,12 +57,12 @@ This study uses the AIDev dataset and GitHub REST API to examine 220,612 closed 
 2. Mixed-effects model lacks diagnostics. Only EMMs and Tukey p-values shown; no random-effects variance, model CIs, AIC/likelihood metrics, or explicit agent × quarter interaction. The “no temporal effect” and “difference less pronounced in Q4” statements need stronger quantitative support.
 3. Topic labelling relies on LLM summarization. Summaries are unvalidated as inputs to BERTopic; evaluator model overlap / prompt not given. Compare against raw title + body BERTopic results.
 4. RQ3 restriction to merged PRs restricts scope and may inflate agent quality (selected-on-acceptance). Recommend sensitivity including rejected samples / weighting.
-5. Quarter boundaries are self-referential (start from the first agentic PR) — short activity spans make Q4 edge cases; clarify repository inclusion difference between Table 1 (≥1 A-PRs, n 489) and Table 2 (≥2 A-PRs, n ~309).
+5. Quarter boundaries are self-referential (start from the first agentic PR): short activity spans make Q4 edge cases; clarify repository inclusion difference between Table 1 (≥1 A-PRs, n 489) and Table 2 (≥2 A-PRs, n ~309).
 6. Effect size interpretations and signs: clarify Cliff's δ direction, e.g. Table 7's Cursor changed-LOC comparison says p=0.375 but no practical meaning; in Table 5 explain "Cursor higher (OR less than 1?)".
 7. Editorials: fix "Finlay", "Result", "agenic". Also κ formatting: 84.2% vs 0.842; consistency on text construction.
 8. Self-citation signal: research may be benefiting from recent unpublished (2026) preprints. Consider re-anchoring claims on peer-reviewed sources.
 
-**Part B — non-standard review tasks assignment to this paper (detailed in attached evidence file).**
+**Part B: non-standard review tasks assignment to this paper (detailed in attached evidence file).**
 
 ### Part B-A. Level and rating of publication venue
 - Listed venue: **Proceedings of the ACM on Measurement and Analysis of Computing Systems (POMACS), Vol. 37 No. 4, Article 111, (July 2026)**; SIGMETRICS-associated ACM journal.
@@ -72,7 +72,7 @@ This study uses the AIDev dataset and GitHub REST API to examine 220,612 closed 
 - Comment: An apparent mismatch: paper is on empirical SE (mining PRs / coding agents), whereas a measurement-and-analysis community typical of POMACS/SIGMETRICS is performance modeling oriented; steady-state evidence for computer-systems/general software-engineering venues (TOSEM, Empirical Software Engineering, IEEE TSE, MSR) where A\* category findings would get SE attention. Consider whether the paper will be re-named for assessing.
 
 ### Part B-B. Publication indexes of the main author
-- "Main author" ambiguity: first author Iren Mazloomzadeh (Ph.D. student) — Google Scholar h ≈ 1–2, i10 ≈ 0; PolyPublie ~7 works / 4 citations.
+- "Main author" ambiguity: first author Iren Mazloomzadeh (Ph.D. student); Google Scholar h ≈ 1–2, i10 ≈ 0; PolyPublie ~7 works / 4 citations.
 - Senior/corresponding author, Foutse Khomh (Polytechnique Montréal, Full Professor): h-index 65, i10-index 266 (Google Scholar; 16,365 total citations).
 - Please clarify which index is demanded; Foutse has substantial scholarly influence.
 - Evidence: Polytechnique expert directory · Google Scholar user YYXb3KIAAAAJ.
@@ -106,7 +106,7 @@ Quality-of-description verdict:
 - **Reasoning for application stated**: Thematic headings with justification; GLMM used for non-normal response; BERTopic for short PRs.
 - **Gaps / missing** (needed for reproducing): LLM summarization prompt, full topic-model hyperparameters (UMAP dimensions, seed, K-means initialization settings, BERTopic config dump); bug-fix keyword exact list; SZZ implementation options (regular/AGSZZ) and parameters; random seeds; exact CSVs/code in the replication package (not inspected); how topics must be validated through human consensus; no model diagnostics.
 
-Conclusion of D (one paragraph): The empirical approach is detailed and repeatable if the replication package provides additional scripts, but description leaves out details that affect finding robustness—especially the LLM summarization step and GLMM/SZZ parameter choices. For submission publication, request an appendix/model/diagnostic report snapshot.
+Conclusion of D (one paragraph): The empirical approach is detailed and repeatable if the replication package provides additional scripts, but description leaves out details that affect finding robustness: especially the LLM summarization step and GLMM/SZZ parameter choices. For submission publication, request an appendix/model/diagnostic report snapshot.
 
 ### Ethics table
 - Conflict of interest: No.
@@ -118,4 +118,4 @@ Conclusion of D (one paragraph): The empirical approach is detailed and repeatab
 "Strong-hearted extension of existing agent-impact studies, but major revision needed on causal/robustness evidence (GLMM diagnostics + sensitivity on topic generation / bug NLP) before acceptance. Please increase review notes and re-evaluate indicator vs sample selection." (Rewrite to standard English in final.)
 
 ## Suggested corrected abstract (author-facing)
-No — keep author's current abstract as basis.
+No; keep author's current abstract as basis.
